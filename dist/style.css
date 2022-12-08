@@ -406,7 +406,7 @@ html {
 }
 
 body {
-  background-image: url(images/powerPlay-background.svg);
+  background-image: url("images/powerPlay-background.svg");
   font-family: "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", Meiryo, sans-serif;
 }
 body.fixed {
@@ -766,8 +766,8 @@ a[href^="tel:"] {
 }
 
 .title {
-  font-size: 24px;
-  color: #333333;
+  font-size: 48px;
+  color: #E12867;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0;

@@ -1,0 +1,248 @@
+//-------------------------------
+//  Keyframes animation
+//-------------------------------
+
+//スクロールアニメーション
+@keyframes scroll-lead{
+    0%{
+        transform: scale(0, 1);
+        transform-origin: 0 0;
+    }
+    50%{
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+    }
+    51%{
+        transform: scale(1, 1);
+        transform-origin: 100% 0;
+    }
+    100%{
+        transform: scale(0, 1);
+        transform-origin: 100% 0; 
+    }
+  }
+@keyframes bgextendAnimeBase{
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;  
+  }
+}
+@keyframes bgextendAnimeSecond{
+  0% {
+    opacity:0;
+  }
+
+  100% {
+    opacity:1;  
+  }
+}
+@keyframes fadeToRight{
+  0% {
+    opacity:0;
+    transform: translateX(-5%);
+  }
+
+  100% {
+    opacity:1;
+    transform: translateX(0%);
+  }
+}
+@keyframes transitionToTop{
+  from {
+    opacity: 0;
+    transform: translate3d(0, 140%, 0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0, 0%, 0);
+  }
+}
+@keyframes fadeInUp{
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1.0);
+  }
+}
+@keyframes fadeUp{
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//ローディングアニメーション
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+  10%{
+    opacity: 1;
+    transform: rotateZ(8deg);
+  }
+  20%{
+    opacity: 1;
+    transform: rotateZ(-8deg);
+  }
+  30%{
+    opacity: 1;
+    transform: rotateZ(8deg);
+  }
+  40%{
+    opacity: 1;
+    transform: rotateZ(-8deg);
+  }
+  50%{
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+}
+//メインビジュアル
+@keyframes snowanime01{
+  0% {
+    opacity: 0; 
+  }
+  15%{
+    opacity: 0.5;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100%{ 
+    opacity: 0; 
+  }
+}
+@keyframes snowanime02{
+  0% {
+    opacity: 0; 
+  }
+  15%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 0.5;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100%{ 
+    opacity: 0; 
+  }
+}
+@keyframes snowanime03{
+  0% {
+    opacity: 0; 
+  }
+  30%{
+    opacity: 0;
+  }
+  45%{
+    opacity: 0.5;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100%{ 
+    opacity: 0; 
+  }
+}
+@keyframes snowanime04{
+  0% {
+    opacity: 0; 
+  }
+  45%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 0.5;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100%{ 
+    opacity: 0; 
+  }
+}
+@keyframes snowanime05{
+  0% {
+    opacity: 0; 
+  }
+  60%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0.5;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100%{ 
+    opacity: 0; 
+  }
+}
+@keyframes snowanime06{
+  0% {
+    opacity: 0; 
+  }
+  75%{
+    opacity: 0;
+  }
+  90%{
+    opacity: 0.5;
+  }
+  100%{ 
+    opacity: 0; 
+  }
+}
+//NowOnAir
+@keyframes scrollHorizon{
+  0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+@keyframes vibration{
+  0%{
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+  10%{
+    opacity: 1;
+    transform: rotateZ(12deg);
+  }
+  20%{
+    opacity: 1;
+    transform: rotateZ(-12deg);
+  }
+  30%{
+    opacity: 1;
+    transform: rotateZ(12deg);
+  }
+  40%{
+    opacity: 1;
+    transform: rotateZ(-12deg);
+  }
+  50%{
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+  100%{
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+}
+  

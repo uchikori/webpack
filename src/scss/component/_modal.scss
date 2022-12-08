@@ -1,0 +1,53 @@
+@use '../global' as g;
+.modal{
+    display: none;
+    &__overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        // right: 0;
+        // bottom: 0;
+        background-color: rgba(0,0,0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    &__container{
+        max-width: 1000px;
+        max-height: 100vh;
+        overflow-y: auto;
+        @include g.pc{
+            max-width: 94%;
+        }
+    }
+    .close_btn{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span{
+            width: 100%;
+            height: 2px;
+            background-color: g.$color-white;
+            border-radius: 100vh;
+            display: block;
+            &:first-child{
+                transform-origin: center;
+                transform: translateY(2px) rotateZ(-45deg);
+            }
+            &:last-child{
+                transform-origin: center;
+                transform:  rotateZ(45deg);
+            }
+        }
+    }
+}
+
+.modal.is-open {
+    display: block;
+}

@@ -1,0 +1,8 @@
+@use '../global' as g; 
+//タイトル
+.title{
+    @include g.font-style(24px, g.$color-black, 700, 1.5, 0);
+    &__second{
+        @include g.font-style(20px, g.$color-black, 700, 1.5, 0);
+    }
+}

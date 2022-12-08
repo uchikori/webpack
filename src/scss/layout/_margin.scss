@@ -1,0 +1,70 @@
+@use '../global' as g;
+.marginCenter{
+    margin: 0 auto;
+}
+.mt-10{
+    margin-top: 10px;
+    @include g.pc{
+        margin-top: 1rem;
+    }
+}
+.mt-20{
+    margin-top: 20px;
+    @include g.pc{
+        margin-top: 2rem;
+    }
+}
+.mt-30{
+    margin-top: 30px;
+    @include g.pc{
+        margin-top: 3rem;
+    }
+}
+.mt-40{
+    margin-top: 40px;
+    @include g.pc{
+        margin-top: 4rem;
+    }
+}
+.mt-50{
+    margin-top: 50px;
+    @include g.pc{
+        margin-top: 5rem;
+    }
+}
+.mt-60{
+    margin-top: 60px;
+    @include g.pc{
+        margin-top: 6rem;
+    }
+}
+.mt-70{
+    margin-top: 70px;
+    @include g.pc{
+        margin-top: 7rem;
+    }
+}
+.mt-80{
+    margin-top: 80px;
+    @include g.pc{
+        margin-top: 8rem;
+    }
+}
+.mt-100{
+    margin-top: 100px;
+    @include g.pc{
+        margin-top: 10rem;
+    }
+}
+.mt-120{
+    margin-top: 120px;
+    @include g.pc{
+        margin-top: 12rem;
+    }
+}
+.mt-160{
+    margin-top: 160px;
+    @include g.pc{
+        margin-top: 16rem;
+    }
+}

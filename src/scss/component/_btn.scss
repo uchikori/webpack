@@ -1,0 +1,30 @@
+@use '../global' as g;
+.btn{
+    &_grad_orange{
+        padding: 5px 20px;
+        border-radius: 100vh;
+        background: linear-gradient(to Bottom, #FF8855, #FF611E);
+        position: relative;
+        filter: brightness(100%);
+        transition: filter 0.3s ease;
+        display: inline-block;
+        @include g.font-style(16px, g.$color-white, 700, 1, 0);
+        &:hover{
+            filter: brightness(110%);
+            transition: filter 0.3s ease;
+        }
+    }
+    &_color_grey{
+        padding: 5px 20px;
+        border-radius: 100vh;
+        background-color: g.$color-grey;
+        position: relative;
+        transition: filter 0.3s ease;
+        display: inline-block;
+        @include g.font-style(16px, g.$color-white, 700, 1, 0);
+        &:hover{
+            background-color: g.$color-dark;
+            transition: background-color 0.3s ease;
+        }
+    }
+}

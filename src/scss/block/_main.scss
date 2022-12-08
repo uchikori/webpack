@@ -1,0 +1,32 @@
+@use '../global' as g;
+//コンテンツ幅
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    @include g.pc{
+        width: 94%;
+    }
+    @include g.tab{
+        width: calc(396/428)*100%;
+    }
+}
+.small-container{
+    width: 1080px;
+    margin: 0 auto;
+    @include g.pc{
+        width: 94%;
+    }
+    @include g.tab{
+        width: calc(396/428)*100%;
+    }
+}
+.wide-container{
+    width: 1780px;
+    margin: 0 auto;
+    @include g.wide-container{
+        width: 94%;
+    }
+    @include g.tab{
+        width: calc(396/428)*100%;
+    }
+}

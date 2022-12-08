@@ -1,0 +1,84 @@
+@use '../global' as g;
+.br-pc{
+    @include g.tab{
+        display: none;
+    }
+}
+.br-tab{
+    display: none;
+    @include g.tab{
+        display: block;
+    }
+}
+.br-small{
+    display: none;
+    @include g.small{
+        display: block;
+    }
+}
+//テキストボックス
+.text-box{
+    @include g.font-style(16px, g.$color-black, 500, 2, 0);
+    @include g.pc{
+        // font-size: 1.6rem;
+    }
+}
+.text-box_lh_150{
+    @include g.font-style(16px, g.$color-black, 500, 1.5, 0);
+    @include g.pc{
+        font-size: 1.6rem;
+    }
+}
+//ラインハイト
+.lh_100{
+    line-height: 1 !important;
+}
+.lh_150{
+    line-height: 1.5 !important;
+}
+.lh_200{
+    line-height: 2 !important;
+}
+//テキスト色
+.text_color_pink{
+    color: g.$color-pink !important;
+}
+.text_color_black{
+    color: g.$color-black !important;
+}
+.text_color_white{
+    color: g.$color-white !important;
+}
+.text_color_orange{
+    color: g.$color-orange !important;
+}
+//テキストサイズ
+.font_size150{
+    font-size: 150%;
+    // line-height: 1;
+}
+.font_size200{
+    font-size: 200%;
+    // line-height: 1;
+}
+//テキスト向き
+.align-left{
+    text-align: left;
+}
+.align-center{
+    text-align: center;
+}
+.align-rihgt{
+    text-align: right;
+}
+//英字大文字
+.text_uppercase{
+    text-transform: uppercase;
+}
+//背景色
+.tab-hidden{
+    @include g.tab{
+        display: none;
+    }
+}
+//タイトルあしらい

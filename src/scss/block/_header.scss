@@ -1,0 +1,11 @@
+@use '../global' as g;
+// ヘッダー
+.header{
+    width: 100%;
+    padding: 20px;
+    background-color: g.$color-white;
+    border-bottom: solid 1px, g.$color-grey;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,26 @@
+@use '../global' as g;
+//フレックスボックス
+.flex{
+    display: flex;
+    &.column{
+        flex-direction: column;
+    }
+    &.justify-start{
+        justify-content: flex-start;
+    }
+    &.justify-center{
+        justify-content: center;
+    }
+    &.justify-spaceBetween{
+        justify-content:space-between;
+    }
+    &.align-center{
+        align-items:center;
+    }
+    &.align-start{
+        align-items:flex-start;
+    }
+    &.align-end{
+        align-items:flex-end;
+    }
+}

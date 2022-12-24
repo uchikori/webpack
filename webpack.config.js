@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 //画像を圧縮するプラグイン
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+//画像をWebPにするプラグイン
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 
 
@@ -88,41 +90,40 @@ module.exports = {
   plugins: [
     //ファイル（フォルダ）をコピーするプラグイン
     new CopyPlugin({
-      patterns: [
-        {from: "src/images", to: "images/[name][ext]"},
-      ]
+      patterns: [{
+        from: path.resolve(__dirname, "src/images"),
+        to: path.resolve(__dirname, "dist/images")
+      }]
     }),
+
     new ImageMinimizerPlugin({
       test: /\.(png|jpe?g)$/i,
       minimizer: {
-        filename: '[path]/[name].webp',
-        implementation: ImageMinimizerPlugin.squooshMinify,
-        options: {
-          encodeOptions: {
-            webp: {
-              lossless: 1,
-            },
-          },
-        },
-      },
-    }),
-    //画像を圧縮するプラグイン
-    new ImageMinimizerPlugin({
-      test: /\.(png|jpe?g)$/i,
-      minimizer: {
+        filename: 'images/[name]_opt[ext]',
         implementation: ImageMinimizerPlugin.squooshMinify,
         options: {
           encodeOptions: {
             mozjpeg: {
-              quality: 85,
+              quality: 89,
             },
             oxipng: {
               level: 3,
               interlace: false,
             }
-          }
-        }
-      }
+          },
+        },
+      },
+    }),
+
+    new ImageminWebpWebpackPlugin({
+      config: [{
+        test: /\.(png|jpe?g)$/i,
+        options: {
+          quality: 89
+        },
+      }],
+      detailedLogs: true,
+      overrideExtension: true
     }),
 
 

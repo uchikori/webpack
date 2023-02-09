@@ -25,5 +25,8 @@
   },
   "dependencies": {
     "imagemin-webp-webpack-plugin": "^3.3.6"
+  },
+  "volta": {
+    "node": "16.0.0"
   }
 }

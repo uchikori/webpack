@@ -1,6 +1,2 @@
-import bar from './bar.js';
+//CSSの読み込み
 import "./scss/style.scss";
-const foo = require('./foo.js');
-
-bar();
-foo();

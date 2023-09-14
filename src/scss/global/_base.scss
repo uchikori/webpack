@@ -2,22 +2,22 @@
 // レスポンシブ定義
 //-------------------------------
 $ultra: 1920px; //ウルトラワイドモニター
-$wide:  1600px; //ワイドコンテナー
-$pc:    1200px; // PC
-$s-pc:    1300px; // PC
-$tab:   856px;  // タブレット
-$small: 560px;  //ワイドスマホ
-$sp:    428px;  // スマホ
+$wide: 1600px; //ワイドコンテナー
+$pc: 1200px; // PC
+$s-pc: 1300px; // PC
+$tab: 856px; // タブレット
+$small: 560px; //ワイドスマホ
+$sp: 428px; // スマホ
 
 //ウルトラワイドモニター
 @mixin ultra {
-  @media only screen and (min-width: ($ultra)){
+  @media only screen and (min-width: ($ultra)) {
     @content;
   }
 }
 //ウルトラワイドモニター
 @mixin wide-container {
-  @media only screen and (max-width: ($wide)){
+  @media only screen and (max-width: ($wide)) {
     @content;
   }
 }
@@ -52,80 +52,82 @@ $sp:    428px;  // スマホ
   }
 }
 
-
-
 //-------------------------------
 //  font-family
 //-------------------------------
-$font:"Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", Meiryo, sans-serif;;
-$josefin: 'Josefin Sans', sans-serif;;
+$font: "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN",
+  "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", Meiryo, sans-serif;
+$josefin: "Josefin Sans", sans-serif;
 //-------------------------------
 //  color
 //-------------------------------
-$color-black:     #333333;
-$color-dark:      #575757;
-$color-grey:      #cccccc;
-$color-white:     #ffffff;
-$color-orange:    #EC6A06;
-$color-blue:      #283AE1;
-$color-blue2:     #28A7E1;
-$color-red:       #FE3737;
-$color-pink:      #E12867;
+$color-black: #333333;
+$color-dark: #575757;
+$color-grey: #cccccc;
+$color-white: #ffffff;
+$color-orange: #ec6a06;
+$color-blue: #283ae1;
+$color-blue2: #28a7e1;
+$color-red: #fe3737;
+$color-pink: #e12867;
 
 //-------------------------------
 //  font-style mixin
 //-------------------------------
-@mixin font-style($font-size, $font-color, $font-weight, $line-height, $letter-spacing){
-    font-size: $font-size;
-    color: $font-color;
-    font-weight: $font-weight;
-    line-height: $line-height;
-    letter-spacing: $letter-spacing;
+@mixin font-style(
+  $font-size,
+  $font-color,
+  $font-weight,
+  $line-height,
+  $letter-spacing
+) {
+  font-size: $font-size;
+  color: $font-color;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
 }
-
-
 
 //-------------------------------
 //  ベースのCSS
 //-------------------------------
-html{
-    font-family: $font;
-    //---------------------------------------------------
-    //計算式：10px /  デザインカンプの横幅 * 100
-    //画面サイズがデザインカンプ幅の時font-size = 10pxになる
-    //---------------------------------------------------
-    font-size: calc(10 / 1920 * 100) + vw;
-    @include pc{
-        font-size: calc(10 / 1200 * 100) + vw;
-    }
-    @include tab{
-        font-size: calc(10 / 856 * 100) + vw;
-    }
-    @include sp{
-        font-size: calc(10 / 428 * 100) + vw;
-    }
-}
-body{
-  background-image: url("images/powerPlay-background.svg");
+html {
   font-family: $font;
-  &.fixed{
+  //---------------------------------------------------
+  //計算式：10px /  デザインカンプの横幅 * 100
+  //画面サイズがデザインカンプ幅の時font-size = 10pxになる
+  //---------------------------------------------------
+  font-size: calc(10 / 1920 * 100) + vw;
+  @include pc {
+    font-size: calc(10 / 1200 * 100) + vw;
+  }
+  @include tab {
+    font-size: calc(10 / 856 * 100) + vw;
+  }
+  @include sp {
+    font-size: calc(10 / 428 * 100) + vw;
+  }
+}
+body {
+  font-family: $font;
+  &.fixed {
     overflow: hidden;
   }
 }
-.wrapper{
+.wrapper {
   width: 100%;
   overflow-x: hidden;
 }
-img{
+img {
   width: 100%;
   height: 100%;
 }
-picture{
-    display: block;
+picture {
+  display: block;
 }
 a[href^="tel:"] {
-    pointer-events: none;
-    @include small{
-        pointer-events: auto;
-    }
+  pointer-events: none;
+  @include small {
+    pointer-events: auto;
+  }
 }

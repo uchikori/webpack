@@ -8,25 +8,26 @@
     "start": "webpack serve"
   },
   "devDependencies": {
-    "@squoosh/lib": "^0.4.0",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.2",
-    "image-minimizer-webpack-plugin": "^3.8.1",
-    "mini-css-extract-plugin": "^2.7.2",
-    "postcss": "^8.4.19",
-    "postcss-loader": "^7.0.2",
-    "sass": "^1.56.1",
-    "sass-loader": "^13.2.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
-  },
-  "dependencies": {
-    "imagemin-webp-webpack-plugin": "^3.3.6"
+    "css-loader": "^6.7.3",
+    "image-minimizer-webpack-plugin": "^3.8.2",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-webp": "^8.0.0",
+    "imagemin-webp-webpack-plugin": "^3.3.6",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.3.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "webpack-dev-server": "^4.15.0"
   },
   "volta": {
-    "node": "16.0.0"
+    "node": "18.0.0"
   }
 }

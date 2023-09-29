@@ -406,7 +406,6 @@ html {
 }
 
 body {
-  background-image: url("images/powerPlay-background.svg");
   font-family: "Hiragino Sans", ヒラギノ角ゴシック, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", Meiryo, sans-serif;
 }
 body.fixed {
@@ -767,7 +766,7 @@ a[href^="tel:"] {
 
 .title {
   font-size: 48px;
-  color: #E12867;
+  color: #e12867;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0;
@@ -1025,7 +1024,7 @@ a[href^="tel:"] {
 }
 
 .text_color_pink {
-  color: #E12867 !important;
+  color: #e12867 !important;
 }
 
 .text_color_black {
@@ -1037,7 +1036,7 @@ a[href^="tel:"] {
 }
 
 .text_color_orange {
-  color: #EC6A06 !important;
+  color: #ec6a06 !important;
 }
 
 .font_size150 {

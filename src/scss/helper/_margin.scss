@@ -1,0 +1,70 @@
+@use "../global" as g;
+.hp_marginCenter {
+  margin: 0 auto;
+}
+.hp_mt10 {
+  margin-top: 10px;
+  @include g.pc {
+    margin-top: 1rem;
+  }
+}
+.hp_mt20 {
+  margin-top: 20px;
+  @include g.pc {
+    margin-top: 2rem;
+  }
+}
+.hp_mt30 {
+  margin-top: 30px;
+  @include g.pc {
+    margin-top: 3rem;
+  }
+}
+.hp_mt40 {
+  margin-top: 40px;
+  @include g.pc {
+    margin-top: 4rem;
+  }
+}
+.hp_mt50 {
+  margin-top: 50px;
+  @include g.pc {
+    margin-top: 5rem;
+  }
+}
+.hp_mt60 {
+  margin-top: 60px;
+  @include g.pc {
+    margin-top: 6rem;
+  }
+}
+.hp_mt70 {
+  margin-top: 70px;
+  @include g.pc {
+    margin-top: 7rem;
+  }
+}
+.hp_mt80 {
+  margin-top: 80px;
+  @include g.pc {
+    margin-top: 8rem;
+  }
+}
+.hp_mt100 {
+  margin-top: 100px;
+  @include g.pc {
+    margin-top: 10rem;
+  }
+}
+.hp_mt120 {
+  margin-top: 120px;
+  @include g.pc {
+    margin-top: 12rem;
+  }
+}
+.hp_mt160 {
+  margin-top: 160px;
+  @include g.pc {
+    margin-top: 16rem;
+  }
+}

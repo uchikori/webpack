@@ -3,30 +3,12 @@
 .ly_container {
   width: 1200px;
   margin: 0 auto;
-  @include g.pc {
-    width: 94%;
-  }
-  @include g.tab {
-    width: calc(396 / 428) * 100%;
-  }
 }
 .ly_small-container {
   width: 1080px;
   margin: 0 auto;
-  @include g.pc {
-    width: 94%;
-  }
-  @include g.tab {
-    width: calc(396 / 428) * 100%;
-  }
 }
 .ly_wide-container {
   width: 1780px;
   margin: 0 auto;
-  @include g.wide-container {
-    width: 94%;
-  }
-  @include g.tab {
-    width: calc(396 / 428) * 100%;
-  }
 }

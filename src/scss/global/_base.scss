@@ -1,53 +1,53 @@
 //-------------------------------
 // レスポンシブ定義
 //-------------------------------
-$ultra: 1920px; //ウルトラワイドモニター
-$wide: 1600px; //ワイドコンテナー
-$pc: 1200px; // PC
-$s-pc: 1300px; // PC
-$tab: 856px; // タブレット
-$small: 560px; //ワイドスマホ
-$sp: 428px; // スマホ
+$xxl: 1400px; //ウルトラワイドモニター
+$xl: 1200px; // PC
+$lg: 960px; // タブレット
+$md: 600px; //ワイドスマホ
+$sm: 480px; // スマホ
+$xs: 375px; // スマホ
+$xxs: 320px; // スマホ
 
 //ウルトラワイドモニター
-@mixin ultra {
-  @media only screen and (min-width: ($ultra)) {
-    @content;
-  }
-}
-//ウルトラワイドモニター
-@mixin wide-container {
-  @media only screen and (max-width: ($wide)) {
+@mixin xxl {
+  @media only screen and (max-width: ($xxl)) {
     @content;
   }
 }
 //1200px以下のPC及びタブレット
-@mixin pc {
-  @media only screen and (max-width: ($pc)) {
-    @content;
-  }
-}
-//1024px以下のPC及びタブレット
-@mixin s-pc {
-  @media only screen and (max-width: ($s-pc)) {
+@mixin xl {
+  @media only screen and (max-width: ($xl)) {
     @content;
   }
 }
 //タブレット
-@mixin tab {
-  @media only screen and (max-width: ($tab)) {
+@mixin lg {
+  @media only screen and (max-width: ($lg)) {
     @content;
   }
 }
 //ワイドスマホ
-@mixin small {
-  @media only screen and (max-width: ($small)) {
+@mixin md {
+  @media only screen and (max-width: ($md)) {
     @content;
   }
 }
 //スマホ
-@mixin sp {
-  @media only screen and (max-width: ($sp)) {
+@mixin sm {
+  @media only screen and (max-width: ($sm)) {
+    @content;
+  }
+}
+//スマホ
+@mixin xs {
+  @media only screen and (max-width: ($xs)) {
+    @content;
+  }
+}
+//スマホ
+@mixin xxs {
+  @media only screen and (max-width: ($xxs)) {
     @content;
   }
 }
@@ -93,20 +93,6 @@ $color-pink: #e12867;
 //-------------------------------
 html {
   font-family: $font;
-  //---------------------------------------------------
-  //計算式：10px /  デザインカンプの横幅 * 100
-  //画面サイズがデザインカンプ幅の時font-size = 10pxになる
-  //---------------------------------------------------
-  font-size: calc(10 / 1920 * 100) + vw;
-  @include pc {
-    font-size: calc(10 / 1200 * 100) + vw;
-  }
-  @include tab {
-    font-size: calc(10 / 856 * 100) + vw;
-  }
-  @include sp {
-    font-size: calc(10 / 428 * 100) + vw;
-  }
 }
 body {
   font-family: $font;
@@ -127,7 +113,7 @@ picture {
 }
 a[href^="tel:"] {
   pointer-events: none;
-  @include small {
+  @include md {
     pointer-events: auto;
   }
 }

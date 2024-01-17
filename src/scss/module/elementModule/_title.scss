@@ -1,8 +1,1 @@
-@use "../global" as g;
-//タイトル
-.el_title {
-  @include g.font-style(48px, g.$color-pink, 700, 1.5, 0);
-  &__second {
-    @include g.font-style(20px, g.$color-black, 700, 1.5, 0);
-  }
-}
+@use "../../global" as g;

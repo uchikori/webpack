@@ -29,5 +29,8 @@
   },
   "volta": {
     "node": "18.0.0"
+  },
+  "dependencies": {
+    "@lottiefiles/lottie-player": "^2.0.4"
   }
 }

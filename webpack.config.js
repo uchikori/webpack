@@ -19,7 +19,10 @@ module.exports = {
   // development に設定するとソースマップ有効でJSファイルが出力される
   mode: MODE,
   //メインのjavascriptファイル
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    style: "./src/style.js",
+  },
   //ファイルの出力設定
   output: {
     //画像をdist内のimagesフォルダに格納
@@ -27,7 +30,7 @@ module.exports = {
     //出力ファイルのディレクトリ名
     path: path.resolve(__dirname, "dist"),
     // 出力ファイル名
-    filename: "main.js",
+    filename: "[name].js",
   },
   devServer: {
     static: "dist",
@@ -135,7 +138,7 @@ module.exports = {
         {
           test: /\.(png|jpe?g)$/i,
           options: {
-            quality: 89,
+            quality: 95,
           },
         },
       ],
@@ -146,7 +149,9 @@ module.exports = {
     // CSSファイルを外出しにするプラグイン
     new MiniCssExtractPlugin({
       // ファイル名を設定します
-      filename: "style.css",
+      filename: ({ chunk }) => {
+        return chunk.name === "editorStyle" ? "editor-style.css" : "[name].css";
+      },
     }),
   ],
 };
